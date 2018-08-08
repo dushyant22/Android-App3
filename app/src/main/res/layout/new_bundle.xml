@@ -6,15 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scrollbarSize="@dimen/scrollbar_size">
-<!--         android:layout_height="match_parent"  -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        android:orientation="vertical">
 
         <TableLayout
             android:layout_width="match_parent"
@@ -32,7 +29,7 @@
                 <ImageView
                     android:id="@+id/imageView"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="56dp"
                     app:srcCompat="@mipmap/barcode19" />
             </TableRow>
 
@@ -81,8 +78,7 @@
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/fab_margin">
+                android:layout_height="wrap_content">
 
                 <TextView
                     android:id="@+id/lblPartId"
@@ -96,7 +92,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:ems="10"
                     android:text="76543" />
 
                 <TextView
@@ -111,7 +106,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:ems="10"
                     android:text="RM" />
             </TableRow>
 
@@ -270,7 +264,9 @@
 
                 <TableLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/fab_margin"
+                    android:padding="@dimen/fab_margin">
 
                     <TableRow
                         android:layout_width="match_parent"
@@ -286,71 +282,95 @@
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/fab_margin"
+                        android:layout_marginLeft="8dp">
 
                         <TextView
                             android:id="@+id/txtBundleId1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="BD 1" />
+                            android:text="III III IIII Bilett BarCode" />
 
                         <TextView
                             android:id="@+id/txtBundleQty1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="" />
+                            android:text="150" />
+
+                        <TextView
+                            android:id="@+id/txtBundle1UOM"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kgs" />
 
                         <TextView
                             android:id="@+id/txtBundleLoc1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Location" />
+                            android:text="LRM A 5" />
                     </TableRow>
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/fab_margin"
+                        android:layout_marginLeft="8dp">
 
                         <TextView
                             android:id="@+id/txtBundleId2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Bundle Id" />
+                            android:text="III III IIII Bilett BarCode" />
 
                         <TextView
                             android:id="@+id/txtBundleQty2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Qty" />
+                            android:text="150" />
+
+                        <TextView
+                            android:id="@+id/txtBundle2UOM"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kgs" />
 
                         <TextView
                             android:id="@+id/txtBundleLoc2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Location" />
+                            android:text="LRM A 5" />
                     </TableRow>
 
                     <TableRow
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/fab_margin"
+                        android:layout_marginLeft="8dp">
 
                         <TextView
                             android:id="@+id/txtBundleId3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Bundle Id" />
+                            android:text="III III IIII Bilett BarCode" />
 
                         <TextView
                             android:id="@+id/txtBundleQty3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Qty" />
+                            android:text="150" />
+
+                        <TextView
+                            android:id="@+id/txtBundle3UOM"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kgs" />
 
                         <TextView
                             android:id="@+id/txtBundleLoc3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Location" />
+                            android:text="LRM A 5" />
                     </TableRow>
                 </TableLayout>
             </TableRow>

@@ -8,6 +8,12 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,8 +22,7 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="@dimen/fab_margin">
+            android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/imageView2"
@@ -25,6 +30,68 @@
                 android:layout_height="wrap_content"
                 app:srcCompat="@mipmap/barcode19" />
         </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/fab_margin">
+
+            <TextView
+                android:id="@+id/txtPartRMGTIN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:text="RM Part"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/fab_margin">
+
+            <TextView
+                android:id="@+id/lblRMPartId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Part Id : " />
+
+            <TextView
+                android:id="@+id/txtRMPartId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:text="21094
+" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lblRMPartName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Description : " />
+
+            <TextView
+                android:id="@+id/txtRMPartName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:text='Rolled Billet 065 x 065 mm Square       A/SA182-F316/316L'
+                android:textStyle="bold" />
+            <TextView />
+        </TableRow>
+
 
         <TableRow
             android:layout_width="match_parent"
@@ -50,29 +117,6 @@
         </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="@dimen/fab_margin">
-
-            <TextView
-                android:id="@+id/lblPartId"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="PartId : "
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/txtPartNo"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="76543" />
-        </TableRow>
-
-        <TableRow
             android:id="@+id/tableRowRMRequired"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -93,10 +137,10 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="4000" />
+                android:text="1200" />
 
             <TextView
-                android:id="@+id/txtKgs"
+                android:id="@+id/txtUOM"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Kgs" />
@@ -108,18 +152,91 @@
             android:layout_margin="@dimen/fab_margin">
 
             <TextView
-                android:id="@+id/txtRMWithdrawn"
-                android:layout_width="368dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:ems="10"
+                android:text="Raw Material Issue Qty" />
+
+            <EditText
+                android:id="@+id/txtRMIssueQty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
                 android:inputType="textPersonName"
-                android:text="Withdrawn RM Qty"
-                android:visibility="visible" />
+                android:text="1200" />
+
+            <TextView
+                android:id="@+id/txtKgs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kgs" />
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/fab_margin">
+
+            <TextView
+                android:id="@+id/txtPartRFGTIN"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:text="RF Part"
+                android:textStyle="bold" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="@dimen/fab_margin"></TableRow>
+            android:layout_margin="@dimen/fab_margin">
+
+            <TextView
+                android:id="@+id/lblRFPartId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="PartId : "
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtRFPartNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:text="23012" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/lblRFPartName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Description : " />
+
+            <TextView
+                android:id="@+id/txtRFPartName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:text='ASME-B16.5 SO 600 1" --- Solid --- RF --- A/SA182-F316/316L'
+                android:textStyle="bold" />
+            <TextView />
+        </TableRow>
+
+
     </TableLayout>
+    </ScrollView>
 </android.support.constraint.ConstraintLayout>

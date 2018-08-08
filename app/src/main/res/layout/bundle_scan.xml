@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:isScrollContainer="true"
+            android:layoutMode="clipBounds"
+            android:orientation="vertical"
+            tools:background="@android:color/white"
+            >
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    app:srcCompat="@mipmap/barcode19" />
+                <TextView
+                    android:id="@+id/lblSwitchto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Split to New : "
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/imageNewView"
+                    android:layout_width="wrap_content"
+                    app:srcCompat="@mipmap/barcode19" />
+            </TableRow>
+    <!-- Work Order No -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/fab_margin">
+
+                <TextView
+                    android:id="@+id/lblWONo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Work Order Number :"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtWONo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="185069" />
+            </TableRow>
+
+        <!-- Lot/Heat Details -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/fab_margin">
+
+                <TextView
+                    android:id="@+id/lblLotNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lot No" />
+
+                <TextView
+                    android:id="@+id/txtLotNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="00121-USA" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/fab_margin">
+                <TextView
+                    android:id="@+id/lblHeatNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Heat No" />
+                <TextView
+                    android:id="@+id/txtHeatNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="V-32431" />
+            </TableRow>
+            <!-- Operation Details -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/fab_margin">
+
+                <TextView
+                    android:id="@+id/lblOperationId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Operation Id" />
+
+                <TextView
+                    android:id="@+id/txtOperationNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="83461" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/fab_margin">
+
+                <TextView
+                    android:id="@+id/lblOperationName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Operation Name" />
+
+                <TextView
+                    android:id="@+id/txtOperationName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Furnace Heating" />
+            </TableRow>
+            <!-- Debited Part Id -->
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/fab_margin">
+
+                <TextView
+                    android:id="@+id/lblDebitedPartId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Debited Part Id" />
+
+                <TextView
+                    android:id="@+id/txtDebitedPartId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="22612" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/fab_margin">
+
+                <TextView
+                    android:id="@+id/lblDebitedPartDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Debited Part Desc" />
+
+                <TextView
+                    android:id="@+id/txtDebitedPartDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text='ASME-B16.5 SO 300 1" --- Solid --- RF --- A/SA182-F304/304L' />
+            </TableRow>
+            <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/fab_margin">
+                <TextView
+                    android:id="@+id/lblPartId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Part Id" />
+
+                <TextView
+                    android:id="@+id/txtPartId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="67006" />
+             </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/fab_margin">
+
+                <TextView
+                    android:id="@+id/lblPartDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Part Desc" />
+                <TextView
+                    android:id="@+id/txtPartDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text='ASME-B16.5 SW 300 1" --- Sch-40s --- RF --- A/SA182-F304/304L' />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/fab_margin"
+                android:layout_column="2">
+                <Button
+                    android:id="@+id/btnReceive"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Receive Material" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/fab_margin">
+                <Button
+                    android:id="@+id/btnStart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Start Operation" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>
