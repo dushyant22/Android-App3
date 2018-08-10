@@ -1,4 +1,38 @@
 <resources>
     <string name="app_name">A Correct Application.</string>
     <string name="action_settings">Settings</string>
+    <string-array name="scrap_reason">
+        <item>First</item>
+        <item>Second</item>
+        <item>Third</item>
+        <item>Fourth</item>
+        <item>Fifth</item>
+        <item>Sixth</item>
+        <item>Seventh</item>
+    </string-array>
+    <string-array name="rework_reason">
+        <item>One</item>
+        <item>Two</item>
+        <item>Three</item>
+        <item>Four</item>
+        <item>Five</item>
+        <item>Six</item>
+        <item>Seven</item>
+    </string-array>
+    <string-array name="locations">
+        <item>LRM</item>
+        <item>LRM Bay 01 01</item>
+        <item>LRM Bay 01 02</item>
+        <item>LRM Bay 02 01</item>
+        <item>LRM Bay 02 02</item>
+        <item>LRFIN</item>
+        <item>LRFA0101</item>
+        <item>LRFA0102</item>
+        <item>LRFB0101</item>
+        <item>LRFB0202</item>
+        <item>CUT 0101</item>
+        <item>CUT 0102</item>
+        <item>CUT 0101</item>
+        <item>CUT 0202</item>
+    </string-array>
 </resources>

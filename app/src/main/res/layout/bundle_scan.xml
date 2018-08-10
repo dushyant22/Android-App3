@@ -9,7 +9,8 @@
         android:layout_height="match_parent"
         android:focusable="true"
         android:focusableInTouchMode="true"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@drawable/cell_shape">
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -17,12 +18,13 @@
             android:layoutMode="clipBounds"
             android:orientation="vertical"
             tools:background="@android:color/white"
-            >
+            android:background="@drawable/cell_shape"
+            android:padding="3dip">
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-
+                <TableLayout><TableRow>
                 <ImageView
                     android:id="@+id/imageView"
                     android:layout_width="wrap_content"
@@ -38,109 +40,141 @@
                     android:id="@+id/imageNewView"
                     android:layout_width="wrap_content"
                     app:srcCompat="@mipmap/barcode19" />
+                    </TableRow>
+                </TableLayout>
             </TableRow>
     <!-- Work Order No -->
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/fab_margin">
-
+                android:background="@drawable/cell_shape">
+                <TableLayout><TableRow>
                 <TextView
                     android:id="@+id/lblWONo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Work Order Number :"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:text="W O Number :"
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
 
                 <TextView
                     android:id="@+id/txtWONo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:inputType="textPersonName"
                     android:text="185069" />
+                </TableRow></TableLayout>
             </TableRow>
 
         <!-- Lot/Heat Details -->
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/fab_margin">
+                android:background="@drawable/cell_shape">
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:isScrollContainer="true"
+                    android:layoutMode="clipBounds"
+                    android:orientation="vertical"
+                    tools:background="@android:color/white">
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/lblLotNo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Lot No" />
+                        <TextView
+                            android:id="@+id/lblLotNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Lot No : " />
 
-                <TextView
-                    android:id="@+id/txtLotNo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="00121-USA" />
-            </TableRow>
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/fab_margin">
-                <TextView
-                    android:id="@+id/lblHeatNo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Heat No" />
-                <TextView
-                    android:id="@+id/txtHeatNo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="V-32431" />
+                        <TextView
+                            android:id="@+id/txtLotNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="00121-USA" />
+                    </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/lblHeatNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Heat No : " />
+                        <TextView
+                            android:id="@+id/txtHeatNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="V-32431" />
+                    </TableRow>
+                </TableLayout>
             </TableRow>
             <!-- Operation Details -->
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/fab_margin">
-
-                <TextView
-                    android:id="@+id/lblOperationId"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Operation Id" />
-
-                <TextView
-                    android:id="@+id/txtOperationNo"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="83461" />
-            </TableRow>
-            <TableRow
+                android:background="@drawable/cell_shape">
+            <TableLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/fab_margin">
-
-                <TextView
-                    android:id="@+id/lblOperationName"
+                android:layout_height="wrap_content"
+                android:isScrollContainer="true"
+                android:layoutMode="clipBounds"
+                android:orientation="vertical"
+                tools:background="@android:color/white">
+                <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Operation Name" />
+                    android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/txtOperationName"
+                    <TextView
+                        android:id="@+id/lblOperationId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Operation Id : " />
+
+                    <TextView
+                        android:id="@+id/txtOperationNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="83461" />
+                </TableRow>
+                <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Furnace Heating" />
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/lblOperationName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Operation Name : " />
+
+                    <TextView
+                        android:id="@+id/txtOperationName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Furnace Heating" />
+                </TableRow>
+            </TableLayout>
             </TableRow>
             <!-- Debited Part Id -->
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/fab_margin">
-
+                android:background="@drawable/cell_shape">
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:isScrollContainer="true"
+                android:layoutMode="clipBounds"
+                android:orientation="vertical"
+                tools:background="@android:color/white">
+                <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
                 <TextView
                     android:id="@+id/lblDebitedPartId"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Debited Part Id" />
+                    android:text="Debited Part Id : " />
 
                 <TextView
                     android:id="@+id/txtDebitedPartId"
@@ -150,58 +184,125 @@
             </TableRow>
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="@dimen/fab_margin">
+                android:layout_height="match_parent">
 
                 <TextView
                     android:id="@+id/lblDebitedPartDesc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Debited Part Desc" />
-
+                    android:text="Debited Part Desc : " />
                 <TextView
                     android:id="@+id/txtDebitedPartDesc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text='ASME-B16.5 SO 300 1" --- Solid --- RF --- A/SA182-F304/304L' />
             </TableRow>
-            <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_margin="@dimen/fab_margin">
-                <TextView
-                    android:id="@+id/lblPartId"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Part Id" />
-
-                <TextView
-                    android:id="@+id/txtPartId"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="67006" />
-             </TableRow>
+            </TableLayout>
+            </TableRow>
+            <!-- Work Order Part Description -->
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/fab_margin">
+                android:background="@drawable/cell_shape">
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:isScrollContainer="true"
+                    android:layoutMode="clipBounds"
+                    android:orientation="vertical"
+                    tools:background="@android:color/white">
+                    <TableRow
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/lblPartId"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Part Id : " />
 
-                <TextView
-                    android:id="@+id/lblPartDesc"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Part Desc" />
-                <TextView
-                    android:id="@+id/txtPartDesc"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text='ASME-B16.5 SW 300 1" --- Sch-40s --- RF --- A/SA182-F304/304L' />
+                        <TextView
+                            android:id="@+id/txtPartId"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="67006" />
+                     </TableRow>
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/lblPartDesc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Part Desc : " />
+                        <TextView
+                            android:id="@+id/txtPartDesc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text='ASME-B16.5 SW 300 1" --- Sch-40s --- RF --- A/SA182-F304/304L' />
+                    </TableRow>
+                </TableLayout>
             </TableRow>
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/fab_margin"
-                android:layout_column="2">
+                android:background="@drawable/cell_shape">
+                <TableLayout><TableRow>
+                    <TextView
+                        android:id="@+id/lblPrevOpQty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Previous Operation Qty : " />
+                    <TextView
+                        android:id="@+id/txtPrevOpQty"
+                        android:layout_height="wrap_content"
+                        android:text='110' />
+                    <TextView
+                        android:id="@+id/Blank1"
+                        android:layout_height="wrap_content"
+                        android:text='    ' />
+                    <TextView
+                        android:id="@+id/lblRecQty"
+                        android:layout_height="wrap_content"
+                        android:text="Received Qty : " />
+                    <TextView
+                        android:id="@+id/txtRecQty"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:digits="000000000"
+                        android:maxLength="5"
+                        android:text='70' />
+                    <TextView
+                        android:id="@+id/Blank2"
+                        android:layout_height="wrap_content"
+                        android:text='    ' />
+                    <TextView
+                        android:id="@+id/lblStartedQty"
+                        android:layout_height="wrap_content"
+                        android:text="Started Qty : " />
+                    <TextView
+                        android:id="@+id/txtStartedQty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:maxLength="5"
+                        android:text='40' />
+                    <TextView
+                        android:id="@+id/Blank3"
+                        android:layout_height="wrap_content"
+                        android:text='    ' />
+                    <TextView
+                        android:id="@+id/txtPrevOpUOM"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='Pcs' />
+                </TableRow></TableLayout>
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cell_shape">
                 <Button
                     android:id="@+id/btnReceive"
                     android:layout_width="match_parent"
@@ -211,12 +312,172 @@
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="@dimen/fab_margin">
+                android:background="@drawable/cell_shape">
                 <Button
                     android:id="@+id/btnStart"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Start Operation" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cell_shape">
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:isScrollContainer="true"
+                    android:layoutMode="clipBounds"
+                    android:orientation="vertical"
+                    tools:background="@android:color/white">
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:id="@+id/imageViewWCs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            app:srcCompat="@mipmap/barcode19" />
+
+                        <TextView
+                            android:id="@+id/lblWCs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Work Centers : " />
+                        <TextView
+                            android:id="@+id/txtWCs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text='86341, 86451, ' />
+                    </TableRow></TableLayout>
+            </TableRow>
+            <TableRow>
+                <TableLayout><TableRow>
+                    <TextView
+                        android:id="@+id/lblOKQty"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="OK Qty : " />
+                    <TextView
+                        android:id="@+id/txtOKPCsQty"
+                        android:layout_height="wrap_content"
+                        android:text='30' />
+                    <TextView android:id="@+id/Blank6" android:layout_height="wrap_content" android:text='    ' />
+                    <TextView
+                        android:id="@+id/txtWOOKUOM"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text='Pcs' />
+                </TableRow></TableLayout>
+            </TableRow>
+            <TableRow>
+                <TableLayout><TableRow>
+                    <TextView
+                        android:id="@+id/lblScrapQty"
+                        android:layout_height="wrap_content"
+                        android:text="Scrap Qty : " />
+                    <TextView
+                        android:id="@+id/txtScrapQty"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:digits="000000000"
+                        android:maxLength="5"
+                        android:text='2' />
+                    <TextView android:id="@+id/Blank4" android:layout_height="wrap_content" android:text='    ' />
+                    <TextView
+                        android:id="@+id/lblScrapReason"
+                        android:layout_height="wrap_content"
+                        android:text="Scrap Reason : " />
+                    <Spinner android:id="@+id/spinScrap"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/scrap_reason">
+                    </Spinner>
+                </TableRow></TableLayout>
+            </TableRow>
+            <TableRow>
+                <TableLayout><TableRow>
+                    <TextView
+                        android:id="@+id/lblReworkQty"
+                        android:layout_height="wrap_content"
+                        android:text="Rework Qty : " />
+                    <TextView
+                        android:id="@+id/txtReworkQty"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:digits="000000000"
+                        android:maxLength="5"
+                        android:text='2' />
+                    <TextView android:id="@+id/Blank5" android:layout_height="wrap_content" android:text='    ' />
+                    <TextView
+                        android:id="@+id/lblReworkReason"
+                        android:layout_height="wrap_content"
+                        android:text="Rework Reason : " />
+                    <Spinner android:id="@+id/spinRework"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/rework_reason">
+                    </Spinner>
+                </TableRow></TableLayout>
+            </TableRow>
+            <TableRow>
+                <TableLayout><TableRow>
+                    <ImageView
+                        android:id="@+id/imageViewLocations"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        app:srcCompat="@mipmap/barcode19" />
+                    <TextView
+                        android:id="@+id/lblLocation"
+                        android:layout_height="wrap_content"
+                        android:text="Location : " />
+                    <Spinner android:id="@+id/spinLocation"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/locations">
+                    </Spinner>
+                </TableRow></TableLayout>
+            </TableRow>
+            <TableRow android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cell_shape">
+                    <Button
+                        android:id="@+id/btnSubmit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Submit" />
+
+            </TableRow>
+        <TableRow>
+            <TableLayout><TableRow>
+                <TextView
+                    android:id="@+id/lblNextOperation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Next Operation : " />
+                <TextView
+                    android:id="@+id/txtNextOPeration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text='Next Op : 55555,  Green Inspection ' />
+            </TableRow></TableLayout>
+        </TableRow>
+            <TableRow android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/cell_shape">
+                <Button
+                    android:id="@+id/btnIssue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Issue" />
+
+            </TableRow>
+            <TableRow>
+                <TableLayout><TableRow>
+                <TextView android:id="@+id/Blank7" android:layout_height="wrap_content" android:text='    ' />
+                </TableRow><TextView android:id="@+id/Blank8" android:layout_height="wrap_content" android:text='    ' /><TableRow>
+                </TableRow><TextView android:id="@+id/Blank9" android:layout_height="wrap_content" android:text='    ' /><TableRow>
+                </TableRow></TableLayout>
             </TableRow>
         </TableLayout>
     </ScrollView>
